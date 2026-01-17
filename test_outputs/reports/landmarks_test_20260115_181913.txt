@@ -1,0 +1,15 @@
+
+================================================================================
+人脸特征点检测测试
+================================================================================
+时间: 2026-01-15 18:19:13
+================================================================================
+测试图片: tests/250120_inauguration_trump_oath_hpMain_16x9.jpg
+
+Exception ignored in: <function VisionPerceptor.__del__ at 0x778d72f4e0e0>
+Traceback (most recent call last):
+  File "/media/liuyajun/Work1/code/XGO/Aico_emotion/src/perception/human_face.py", line 738, in __del__
+    self.release()
+  File "/media/liuyajun/Work1/code/XGO/Aico_emotion/src/perception/human_face.py", line 722, in release
+    if self.cap is not None:
+AttributeError: 'VisionPerceptor' object has no attribute 'cap'

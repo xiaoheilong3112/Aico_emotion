@@ -1,0 +1,50 @@
+
+================================================================================
+人脸检测调试报告
+================================================================================
+时间: 2026-01-15 17:43:10
+================================================================================
+测试图片: tests/250120_inauguration_trump_oath_hpMain_16x9.jpg
+
+原始图像尺寸: 992x558
+/media/liuyajun/Work1/code/XGO/Aico_emotion/.venv/lib/python3.10/site-packages/tensorflow/lite/python/interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+    
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+预处理后尺寸: 992x558
+
+✅ MediaPipe检测到 4 张人脸:
+
+人脸 #1:
+  位置: x=699, y=33, w=142, h=142
+  面积: 20164 像素
+  裁剪区域尺寸: 142x142
+  FER结果: NEUTRAL (44.0%)
+
+人脸 #2:
+  位置: x=0, y=0, w=145, h=145
+  面积: 21025 像素
+  裁剪区域尺寸: 145x145
+  FER结果: 未检测到情感
+
+人脸 #3:
+  位置: x=314, y=71, w=187, h=187
+  面积: 34969 像素
+  裁剪区域尺寸: 187x187
+  FER结果: 未检测到情感
+
+人脸 #4:
+  位置: x=518, y=64, w=163, h=163
+  面积: 26569 像素
+  裁剪区域尺寸: 163x163
+  FER结果: 未检测到情感
+
+✅ 调试图像已保存: test_outputs/debug_all_detected_faces.jpg
+   显示了所有 4 个检测框
+
+================================================================================
+测试完成: 2026-01-15 17:43:11
+================================================================================
+

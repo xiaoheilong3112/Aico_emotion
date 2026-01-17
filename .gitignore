@@ -1,0 +1,253 @@
+########################################
+# 基础日志与运行态
+########################################
+/logs
+*.log
+
+########################################
+# Python 缓存与虚拟环境
+########################################
+.venv/
+venv/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.mypy_cache/
+.pytest_cache/
+.coverage*
+coverage.xml
+.nox/
+.tox/
+.python-version
+
+########################################
+# 配置文件（仅忽略本地/敏感配置，保留模板与说明）
+########################################
+/config/*
+!/config/.gitkeep
+!/config/README.md
+!/config/*.example.json
+!/config/*.schema.json
+# 如需忽略本地实际运行配置，请取消下一行注释
+# /config/config.json
+
+########################################
+# 缓存与临时文件
+########################################
+/cache/
+.cache/
+
+########################################
+# 大文件与二进制制品（建议改用 Git LFS 或外部存储）
+########################################
+# 归档与镜像
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.tar.bz2
+*.tbz2
+*.tar.xz
+*.txz
+*.7z
+*.rar
+*.iso
+*.img
+*.dmg
+
+# 视频（常见大文件）
+*.mp4
+*.mkv
+*.mov
+*.avi
+*.wmv
+*.flv
+*.webm
+*.ts
+*.m2ts
+
+# 无损/大体积音频（请评估是否需要版本控制）
+*.wav
+*.flac
+*.ape
+
+# 设计源文件与高分辨率位图
+*.psd
+*.ai
+*.eps
+*.tiff
+*.tif
+*.bmp
+*.raw
+*.cr2
+*.nef
+
+# 数据集/模型/检查点（已在 models 控制下，冗余保险）
+*.onnx
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.pb
+*.tflite
+*.npz
+*.npy
+
+# 数据库/缓存/导出
+*.db
+*.sqlite
+*.sqlite3
+*.mdb
+*.sql
+*.bak
+
+########################################
+# 模型文件（保留目录与说明）
+########################################
+/models/*
+!/models/.gitkeep
+!/models/README.md
+
+########################################
+# 构建与打包产物（PyInstaller / wheel 等）
+########################################
+/build/
+/dist/
+*.spec
+*.egg-info/
+/wheels/
+pip-wheel-metadata/
+
+########################################
+# 非必须文件（如需共享测试，删除对应规则）
+########################################
+/Redundant_Content
+/tests
+
+########################################
+# 操作系统与编辑器
+########################################
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE
+.idea/
+.history/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+########################################
+# 文档子项目（VitePress / Node）
+########################################
+/documents/node_modules/
+/documents/.pnpm-store/
+/documents/dist/
+/documents/.vitepress/cache/
+/documents/.vitepress/dist/
+/documents/docs/.vitepress/cache/
+/documents/docs/.vitepress/dist/
+
+########################################
+# 安装器
+########################################
+/installer
+
+
+
+
+
+
+
+
+
+
+
+# # .gitignore 使用指南
+
+# 本指南说明本仓库 `.gitignore` 的组织方式、常见场景与团队协作建议，帮助你在提交代码时避免将不必要或过大的文件纳入版本控制。
+
+# ## 总体原则
+# - 优先忽略运行态产物、缓存、日志、构建输出与平台/IDE 生成的文件。
+# - 业务必要的示例/模板应纳入版本控制（例如配置模板、占位文件、README）。
+# - 对于大体积或二进制不可 diff 的文件（视频、无损音频、模型、数据集、归档镜像、数据库等），建议改用 Git LFS 或外部存储；避免直接提交到仓库。
+
+# ## 目录策略
+# - `config/`：忽略实际本地配置，仅保留模板与说明（`README.md`、`*.example.json`、`*.schema.json`、`.gitkeep`）。
+#   - 如需忽略 `config/config.json`，可在 `.gitignore` 中取消对应注释。
+# - `models/`：默认忽略模型文件，仅保留目录占位与说明（`.gitkeep`、`README.md`）。
+# - `cache/`、`logs/`：忽略运行时缓存与日志。
+# - `build/`、`dist/`、`*.spec`、`*.egg-info/`：忽略构建/打包产物。
+# - `Redundant_Content/`、`tests/`：默认忽略（如需纳入版本控制，可删除对应规则）。
+
+# ## 常见大文件
+# 以下类型默认忽略，若确需版本化，建议评估并使用 Git LFS：
+# - 归档：`.zip`/`.tar`/`.tar.gz`/`.7z`/`.rar` 等
+# - 镜像：`.iso`/`.img`/`.dmg`
+# - 视频：`.mp4`/`.mkv`/`.mov`/`.avi`/`.wmv`/`.flv`/`.webm`/`.ts`/`.m2ts`
+# - 无损音频：`.wav`/`.flac`/`.ape`
+# - 设计源文件与高分辨率位图：`.psd`/`.ai`/`.eps`/`.tiff(.tif)`/`.bmp`/`.raw`/`.cr2`/`.nef`
+# - 模型与数据集：`.onnx`/`.pt`/`.pth`/`.ckpt`/`.h5`/`.pb`/`.tflite`/`.npz`/`.npy`
+# - 数据库/备份：`.db`/`.sqlite(.sqlite3)`/`.mdb`/`.sql`/`.bak`
+
+# > 说明：未对 `.png`/`.jpg`/`.svg` 等常见图片做全局忽略，避免影响正常 UI 资源提交；若需要限制，请在具体目录下单独添加 `.gitignore` 并给出例外说明。
+
+# ## 例外与占位
+# - 需要保留空目录时，使用 `.gitkeep` 占位；
+# - `.gitignore` 中可通过 `!` 添加例外规则，例如：
+#   ```gitignore
+#   /models/*
+#   !/models/README.md
+#   !/models/.gitkeep
+#   ```
+
+# ## Git LFS 建议
+# 适合放入 LFS 的典型类型：视频、无损音频、大模型权重、数据集切片、设计源文件。示例配置：
+# ```bash
+# # 一次性安装（开发机）
+# sudo apt-get install git-lfs -y || true
+
+# git lfs install
+
+# # 在仓库中跟踪常见大文件类型
+# cd /path/to/repo
+# git lfs track "*.mp4" "*.mkv" "*.mov" "*.wav" "*.flac" "*.onnx" "*.pt" "*.pth"
+
+# git add .gitattributes
+# git commit -m "chore: track large binaries with Git LFS"
+# ```
+# 注意：已提交到 Git 的大文件不会自动迁移到 LFS，需要使用 `git lfs migrate` 或重新整理历史。
+
+# ## 团队协作建议
+# - 新增需要忽略的文件类型时，优先考虑是否改用 LFS/外部存储；
+# - 在 `.gitignore` 中附上简短注释，说明忽略原因；
+# - 提交前检查（示例脚本已提供）：避免将本地配置、缓存、大文件误提交；
+# - 如需共享测试，请先移除 `/tests` 忽略，并补充最小可运行说明。
+
+# ## 快速检查
+# 在本仓库根目录运行：
+# ```bash
+# # 查看将被提交的文件（建议在提交前使用）
+# git status --porcelain
+
+# # 查看大文件（> 50MB）
+# find . -type f -size +50M -not -path "*/.git/*"
+# ```
+
+# 有任何建议或发现遗漏的文件类型，请在 PR 中说明或补充到 `.gitignore` 与本指南中。
+# 暂时不提交的文件（按照用户要求）
+*.md
+!README.md
+src/perception/hand_gesture.py
+tests/test_hand_gesture.py
+tests/test_rps_dataset.py
+

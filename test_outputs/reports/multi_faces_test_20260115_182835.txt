@@ -1,0 +1,22 @@
+
+================================================================================
+多人脸检测测试
+================================================================================
+时间: 2026-01-15 18:28:35
+================================================================================
+测试图片: tests/250120_inauguration_trump_oath_hpMain_16x9.jpg
+最大人脸数: 5
+置信度阈值: 50%
+
+/media/liuyajun/Work1/code/XGO/Aico_emotion/.venv/lib/python3.10/site-packages/tensorflow/lite/python/interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+    
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+图像尺寸: 992x558
+
+✅ 检测到 4 张人脸
+   有效: 1 张
+
+人脸 #1:

@@ -1,0 +1,26 @@
+
+================================================================================
+RPS数据集可视化示例
+================================================================================
+时间: 2026-01-16 11:41:34
+================================================================================
+为每个类别生成一个可视化示例
+
+📂 处理类别: ROCK
+  ✅ 已保存: /media/liuyajun/Work1/code/XGO/Aico_emotion/test_outputs/rps_samples/rock_sample.jpg
+     源文件: D7Ykcj1tYAannu8h.png
+
+📂 处理类别: PAPER
+  ✅ 已保存: /media/liuyajun/Work1/code/XGO/Aico_emotion/test_outputs/rps_samples/paper_sample.jpg
+     源文件: K6IACWoiTOnGR9Np.png
+
+📂 处理类别: SCISSORS
+  ✅ 已保存: /media/liuyajun/Work1/code/XGO/Aico_emotion/test_outputs/rps_samples/scissors_sample.jpg
+     源文件: esPjow7BN3RXc4gk.png
+
+📁 输出目录: /media/liuyajun/Work1/code/XGO/Aico_emotion/test_outputs/rps_samples
+
+================================================================================
+测试完成: 2026-01-16 11:41:34
+================================================================================
+
