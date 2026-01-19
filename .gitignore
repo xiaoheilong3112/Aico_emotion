@@ -245,7 +245,7 @@ Desktop.ini
 
 # 有任何建议或发现遗漏的文件类型，请在 PR 中说明或补充到 `.gitignore` 与本指南中。
 # 暂时不提交的文件（按照用户要求）
-*.md
+# *.md  # 已注释：Ralph Wiggum 工作流需要 .md 文件
 !README.md
 src/perception/hand_gesture.py
 tests/test_hand_gesture.py
