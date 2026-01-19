@@ -169,7 +169,7 @@ git commit -m "测试: 添加集成测试用例"
 git commit -m "重构: 提取公共感知基类"
 
 # 推送到 GitHub
-git push github main
+git push github master
 ```
 
 **提交类型（中文）**:

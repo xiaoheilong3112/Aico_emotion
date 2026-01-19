@@ -27,7 +27,7 @@ git add .
 git commit -m "功能: 添加音频感知模块"
 
 # 4. 推送到 GitHub
-git push github main
+git push github master
 
 # 5. （可选）同时推送到阿里云
 git push origin main
@@ -88,7 +88,7 @@ git commit -m "构建: 添加 requirements.txt 依赖"
 git push -u github main
 
 # 之后就可以简写
-git push github main
+git push github master
 ```
 
 ---
@@ -97,7 +97,7 @@ git push github main
 
 ### 方法 1: 分别推送
 ```bash
-git push github main
+git push github master
 git push origin main
 ```
 
@@ -143,7 +143,7 @@ git push github feature/audio-perception
 # 合并回主分支
 git checkout main
 git merge feature/audio-perception
-git push github main
+git push github master
 ```
 
 ### 查看分支
@@ -216,7 +216,7 @@ git config branch.main.remote github
 **A**: 修改最后一次提交：
 ```bash
 git commit --amend -m "功能: 新的中文提交消息"
-git push github main --force  # 如果已经推送，需要强制推送
+git push github master --force  # 如果已经推送，需要强制推送
 ```
 
 ### Q: 推送失败怎么办？
@@ -234,7 +234,7 @@ git config --global credential.helper cache
 ```bash
 # 先拉取再推送
 git pull github main --rebase
-git push github main
+git push github master
 ```
 
 3. **权限问题**:
@@ -273,7 +273,7 @@ cat ~/.ssh/id_ed25519.pub
 3. ✅ 更新 `IMPLEMENTATION_PLAN.md`
 4. ✅ `git add .`
 5. ✅ `git commit -m "类型: 描述"` （中文）
-6. ✅ `git push github main`
+6. ✅ `git push github master`
 
 你只需要：
 - 运行 `./loop.sh` 生成提示
@@ -289,7 +289,7 @@ cat ~/.ssh/id_ed25519.pub
 git status                          # 查看状态
 git add .                           # 添加所有修改
 git commit -m "功能: 描述"         # 提交（中文）
-git push github main                # 推送到 GitHub
+git push github master                # 推送到 GitHub
 
 # 查看历史
 git log --oneline -10               # 最近 10 条提交

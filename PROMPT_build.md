@@ -52,7 +52,7 @@
    - 类型: 功能、修复、性能、重构、测试、文档、构建
 
 7. **推送代码**:
-   - `git push github main` (推送到 GitHub)
+   - `git push github master` (推送到 GitHub)
    - GitHub 仓库: https://github.com/xiaoheilong3112/Aico_emotion
 
 ## 重要原则 (优先级 99999)
@@ -98,7 +98,7 @@
 4. 更新 `IMPLEMENTATION_PLAN.md`
 5. `git add .`
 6. `git commit -m "类型: 描述"` (**必须使用中文！**)
-7. `git push github main` (推送到 GitHub)
+7. `git push github master` (推送到 GitHub)
 
 ### 不要跳过步骤
 - 测试是强制的
